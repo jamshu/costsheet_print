@@ -1,0 +1,3022 @@
+<?xml version="1.0"?>
+	<t t-name="report.Beta_IT_Proposal">
+		<!-- <t t-call="report.external_layout"> -->
+			<t t-foreach="docs" t-as="o">		 
+					<div class="oe_structure"/>
+						<!--PAGE1-->
+						<div class="page">
+						
+						
+						<t t-foreach="o.company_id.header_image" t-as="image">
+						<t t-if="image.name=='beta logo'">
+						<div class="oe_structure"/>
+						<div class="text-center">
+						<img t-if="image.img" t-att-src="'data:image/png;base64,%s'%image.img" alt="BETA_IT" style="width:700px; height:400px"/>
+						</div>
+						</t>
+						</t>
+						
+						<t t-if="not o or not 'company_id' in o">
+						<t t-set="company" t-value="res_company"></t></t>
+					 <div class="row">
+						<t t-if="o.company_id.name=='Beta Information Technology'">
+						<div class="col-xs-12" >
+						   <center><h3>بيتا لتكنولوجيا المعلومات</h3></center>
+						</div>
+						</t>
+						<t t-if="o.company_id.name=='Dar Beta Information Technology'">
+						<div class="col-xs-12" >
+						   <center><h3>دار بيتا لتكنولوجيا المعلومات</h3></center>
+						</div>
+						</t>
+					 </div>
+					<div class="row">
+							<t t-if="o.company_id.name=='Beta Information Technology'">
+						<div class="col-xs-12" >
+						   <center><h2>Beta Information Technology</h2></center>
+						</div>
+						</t>
+						<t t-if="o.company_id.name=='Dar Beta Information Technology'">
+						<div class="col-xs-12" >
+						   <center><h2>Dar Beta Information Technology</h2></center>
+						</div>
+						</t>
+					</div>
+					<div class="row">
+						<div class="col-xs-6" >
+						   <center><strong><h4>Financial Proposal For:</h4></strong></center>
+						</div>
+						<div class="col-xs-offset-4">
+						   <center><strong><h4>:العرض المالي الخاص بـ</h4></strong></center>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12" >
+						   <center><h3></h3></center>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12" >
+						   <center><h3></h3></center>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12" >
+						   <center><h3><span t-field="o.name"/></h3></center>
+						</div>
+					</div>
+					<div class="row">
+						<br/><br/><br/><br/><br/><br/><br/>
+					 </div>
+					 <div class="row">
+						<div class="col-xs-12" >
+						   <center><h2><span t-field="o.od_customer_id"/></h2></center>
+						</div>
+					</div>
+					 <br/><br/>
+					<div class="row">
+						<div class="col-xs-6" >
+						   <table class="table table-condensed" style="border:1px solid black ;">
+								<thead >
+									<tr>
+										<th   class="text-center" style="border-left:1px solid black;width:25%" >Document Version</th>
+										 <th class="text-center" style="border-left:1px solid black;width:5%"><span t-field="o.od_version"/></th> 
+									</tr>
+								</thead>
+						   </table>
+						</div>
+						<div class="col-xs-6">
+						   <table class="table table-condensed" style="border:1px solid black ;">
+								<thead >
+									<tr>
+										<th   class="text-center" style="border-left:1px solid black;width:5%" >Date</th>
+										 <th class="text-center" style="border-left:1px solid black;width:25%"><span t-field="o.date" t-field-options='{"format": "dd/ MMMM/ yy"}'/></th> 
+									</tr>
+								</thead>
+						   </table>
+						</div>
+					</div>
+					 <div class="row">
+						<div class="col-xs-4" >
+						   <center><h4>Reference No:</h4></center>
+						</div>
+						<div class="col-xs-4" >
+						   <center><h4><span t-field="o.number"/></h4></center>
+						</div>
+						<div class="col-xs-4" >
+						   <center><h4>:رقم العرض</h4></center>
+						</div>
+					 </div>
+					 <div class="row">
+						<div class="col-xs-4" >
+						   <center><h4>Proposal Date:</h4></center>
+						</div>
+						<div class="col-xs-4" >
+						   <center><h4><span t-field="o.date" t-field-options='{"format": "dd/ MMMM/ yy"}'/></h4></center>
+						</div>
+						<div class="col-xs-4" >
+						   <center><h4>:تاريخ العرض</h4></center>
+						</div>
+					 </div>
+                                         <div class="row">
+						   <center><h5>Dubai +97147061111   Abu Dhabi +97126662836   Riyadh +966112006066   Dammam +966138092515   Jeddah +966122616880</h5></center>
+					 </div>
+                                         <div class="row">
+						   <center><h5>www.betait.net</h5></center>
+					 </div>
+					 <div class="oe_structure"/>
+					 
+			</div>
+							
+			
+	<!--PAGE4-->
+
+	<div class="page">
+		<div class="col-xs-12">
+		 <img src="data:image/jpeg;base64,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" alt="800ERP" style="width:200px; height:100px"/>
+		</div>
+		<!-- <t t-call="report.external_layout_header"> -->
+		<br/>
+		<div class="row" ><div class="col-xs-12" >
+						   <center><h3></h3></center>
+						</div>   </div>
+		
+		<div class="row">
+		            <div class="col-xs-12">
+			            <div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+					
+						<div class="col-xs-12" >
+						   <center><h4><span t-field="o.od_customer_id"/></h4></center>
+						</div>
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+					
+						<div class="col-xs-12" >
+						   <center><h4><span t-field="o.name"/></h4></center>
+						</div>
+						</div>
+					</div>
+					<div class="col-xs-12">
+					<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+					
+						<div  class="col-xs-12">
+							<div class="col-xs-4" >
+						   <center><h4>Reference No:</h4></center>
+						</div>
+						<div class="col-xs-4" >
+						   <center><h4><span t-field="o.number"/></h4></center>
+						</div>
+						<div class="col-xs-4" >
+						  <h4>:رقم العرض</h4>
+						</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-xs-12">
+					<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+					
+						<div  class="col-xs-12">
+							<div class="col-xs-4" >
+						 <h4>Proposal Date:</h4>
+						</div>
+						<div class="col-xs-4" >
+						   <center><h4><span t-field="o.date" t-field-options='{"format": "dd/ MMMM/ yy"}'/></h4></center>
+						</div>
+						<div class="col-xs-offset-4" >
+						   <center><h4>:التاريخ</h4></center>
+						</div>
+						</div>
+					</div>
+					</div>
+		</div>
+		<br/>
+		<!-- <div class="row" ><div class="col-xs-12" >
+						   <center><h3></h3></center>
+						</div>   </div> -->
+		 <t t-set="total" t-value="0"/>
+		   <t t-set="material" t-value="0"/>
+				   <t t-set="implementation" t-value="0"/>
+				   <t t-set="maintenance" t-value="0"/>
+				   <t t-set="operation" t-value="0"/>
+		 <table class="table table-condensed" style="border:1px solid black;">
+					<thead style="border:1px solid black;background-color:silver">
+						<tr>
+										<th class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:5%" ><h5>Item الرقم</h5></th>
+										<th class="text-center" style="border-left:1px solid black; border-bottom:1px solid black;width:20%"><center><h5> Description  الوصف</h5></center></th>
+										<!-- <th class="text-center" style="border-left:1px solid black; border-bottom:1px solid black;width:20%"><center><h4> الوصف</h4></center></th> -->
+										<th class="text-center" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><center><h5>Total Price السعر الإجمالي</h5></center></th>
+										
+						</tr>
+				   </thead>
+				   
+				   <tbody>
+				   <t t-set="count" t-value="1"/>
+						<!-- <tr>
+						<td style="width:5%"></td>
+						<td style="width:20%"><h4>Material</h4></td>
+						<td class="text-right" style="width:20%"><h4>المواد</h4></td>
+						<td style="width:5%"></td>
+						</tr> -->
+						<tr >
+										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:5%"><span t-esc="count"/> <t t-set="count" t-value="count + 1"/></td>
+										<td style="text-align:justify;border-left:1px solid black;border-bottom:1px solid black;width:20%"><strong><h5><span t-field="o.material_summary"/></h5></strong></td>
+										<!-- Covers all types of Material, in case requested, such as: HW, SW, Warranty, Subscriptions, Licenses, &amp; Training Centers -->
+										<!-- <td class="text-right" style="border-bottom:1px solid black;width:20%"><h5>تغطي كل أنواع المواد، في حال طلبها، وهي على سبيل المثال: القطع، البرمجيات، الضمان، الاشتراكات، الرخص، والتدريب في المراكز</h5></td> -->
+										<t t-if="o.included_in_quotation"><t t-set="material" t-value="material+o.mat_tot_sale"/></t>
+										<t t-if="o.included_trn_in_quotation"><t t-set="material" t-value="material+o.trn_tot_sale"/></t> <!-- -->
+										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%">
+										<t t-if="(o.included_in_quotation==1) or (o.included_trn_in_quotation==1)">
+										<right><span t-esc="'{0:,.2f}'.format(float(material))"/></right>
+										</t>
+										<t t-if="not((o.included_in_quotation==1) or (o.included_trn_in_quotation==1))">
+										<right>Not Included<br/>غير مشمولة</right>
+										</t>
+										</td>
+										<t t-set="total" t-value="total+material"/>
+						</tr>
+						<!-- <tr>
+						<td style="width:5%"></td>
+						<td style="width:20%"><h4>Implementation</h4></td>
+						<td class="text-right" style="width:20%"><h4>خدمات التركيب</h4></td>
+						<td style="width:5%"></td>
+						</tr> -->
+						<tr>								
+										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:5%" ><span t-esc="count"/> <t t-set="count" t-value="count + 1"/></td>
+										<td style="text-align:justify;border-left:1px solid black;border-bottom:1px solid black;width:20%"><strong><h5><span t-field="o.implementation_summary"/></h5></strong></td>
+										<!-- Beta Information Technology  Implementation &amp; Configuration Services  -->
+										<!-- <td class="text-right" style="border-bottom:1px solid black;width:20%"><h5>الخدمة الفنية للتركيب المقدمة من بيتا لتكنولوجيا المعلومات </h5></td> -->
+										<t t-if="o.included_bim_in_quotation"><t t-set="implementation" t-value="implementation+(o.bim_tot_sale+o.oim_tot_sale)"/></t>
+										<!-- <t t-if="o.included_oim_in_quotation"><t t-set="implementation" t-value="implementation+o.oim_tot_sale"/></t>									 -->
+										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%">
+										<t t-if="(o.included_bim_in_quotation==1) or (o.included_oim_in_quotation==1)">
+										<right><span t-esc="'{0:,.2f}'.format(float(implementation))"/></right>
+										</t>
+										<t t-if="not((o.included_bim_in_quotation==1) or (o.included_oim_in_quotation==1))">
+										<right>Not Included<br/>غير مشمولة</right>
+										</t>
+										</td>
+										<t t-set="total" t-value="total+implementation"/>				
+							
+						</tr>					
+						<!-- <tr>
+						<td style="width:5%"></td>
+						<td style="width:20%"><h4>Beta IT Maintenance</h4></td>
+						<td class="text-right" style="width:20%"><h4>صيانة بيتا لتكنولوجيا المعلومات</h4></td>
+						<td style="width:5%"></td>
+						</tr> -->
+						<tr>
+									
+										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:5%" ><span t-esc="count"/> <t t-set="count" t-value="count + 1"/></td>
+										<td style="text-align:justify;border-left:1px solid black;border-bottom:1px solid black;width:20%"><strong><h5><span t-field="o.amc_summary"/></h5></strong></td>
+										<!-- Beta Information Technology Maintenance Services (Such as Preventive Maintenance, Remedial Maintenance, etc.). These services do not include manufacturer warranty or subscriptions. Refer to Material Section for warranty and subscription. -->
+										<!-- <td class="text-right" style="border-bottom:1px solid black;width:20%"><h5>خدمة الصيانة المقدمة من بيتا لتكنولوجيا المعلومات (كالصيانة الوقائية الدورية، أو إصلاح المشاكل، أو غيرها). لا تشمل هذه الخدمة الضمان أو الاشتراكات المقدمة من قبل طرف الشركة المصنعة. يرجى الرجوع إلى قسم المواد بشأن خدمات الضمان المصنعي أوالاشتراكات</h5></td> -->
+										<t t-if="o.included_bmn_in_quotation"><t t-set="maintenance" t-value="maintenance+(o.bmn_tot_sale+o.omn_tot_sale)"/></t>									
+										<!-- <t t-if="o.included_omn_in_quotation"><t t-set="maintenance" t-value="maintenance+o.omn_tot_sale"/></t>													 -->
+										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%">
+										<t t-if="(o.included_bmn_in_quotation==1) or (o.included_omn_in_quotation==1)">
+										<right><span t-esc="'{0:,.2f}'.format(float(maintenance))"/></right>
+										</t>
+										<t t-if="not((o.included_bmn_in_quotation==1) or (o.included_omn_in_quotation==1))">
+										<right>Not Included<br/>غير مشمولة</right>
+										</t>
+										</td>
+										<t t-set="total" t-value="total+maintenance"/>
+						
+						</tr>					
+						<!-- <tr>
+						<td style="width:5%"></td>
+						<td style="width:20%"><h4>Operation</h4></td>
+						<td class="text-right" style="width:20%"><h4>التشغيل</h4></td>
+						<td style="width:5%"></td>
+						</tr> -->
+						<tr >
+									
+										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:5%" ><span t-esc="count"/> <t t-set="count" t-value="count + 1"/></td>
+										<td style="text-align:justify;border-left:1px solid black;border-bottom:1px solid black;width:20%"><strong><h5><span t-field="o.operation_summary"/></h5></strong></td>
+										<!-- O&amp;M Service for Resident Engineers / Employees at Customer Site -->
+										<!-- <td class="text-right" style="border-bottom:1px solid black;width:20%"><h5> خدمات التشغيل بواسطة مهندسين / موظفين مقيمين لدى العميل </h5></td> -->
+										<t t-if="o.included_om_in_quotation"><t t-set="operation" t-value="operation+o.o_m_tot_sale"/></t>							
+										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%">
+										<t t-if="(o.included_om_in_quotation==1)">
+										<right><span t-esc="'{0:,.2f}'.format(float(operation))"/></right>
+										</t>
+										<t t-if="not(o.included_om_in_quotation==1)">
+										<right>Not Included<br/>غير مشمولة</right>
+										</t>
+										</td>
+										<t t-set="total" t-value="total+operation"/>
+							
+							
+						</tr>					
+					</tbody>
+		</table>
+		<!-- <br/> -->
+		<!-- <div class="col-xs-offset-3">
+		<table class="table table-condensed" style="border:1px solid black;">
+		<thead style="background-color:silver">
+						<tr>
+										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >Sum</td>
+										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(o.sum_tot_sale))"/></right></td>
+						</tr>
+		</thead>
+		</table>
+		</div> -->
+		<div class="col-xs-offset-3">
+		<table class="table table-condensed" style="border:1px solid black;">
+		<thead style="background-color:silver">
+		                <tr>
+										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >Sum</td>
+										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(o.sum_tot_sale))"/></right></td>
+						</tr>
+						<tr>
+										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >Special Discount</td>
+										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(o.special_discount))"/></right></td>
+						</tr>
+						<tr>
+										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >Total Excluding VAT ----- المجموع غير شامل لضريبة القيمة المضافة (Note: Government has introduced VAT starting Jan 2018 ----- قامت  الحكومة بفرض 
+ ضريبة القيمة المضافة على المبيعات في العام القادم ابتداء من شهر يناير 2018)</td>
+										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(o.sum_total_sale))"/></right></td>
+						</tr>
+		</thead>
+		</table>
+		</div>
+		<!-- <t t-if="o.company_id.name=='Beta Information Technology'">
+		<div class="col-xs-offset-3">
+		<table class="table table-condensed" style="border:1px solid black;">
+		<thead style="background-color:silver">
+						<tr>
+										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >Total</td>
+										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(total))"/></right></td>
+						</tr>
+		</thead>
+		</table>
+		</div>
+		</t>
+		<br/>
+		<t t-if="o.company_id.name=='Dar Beta Information Technology'">
+		<div class="col-xs-offset-3">
+		<table class="table table-condensed" style="border:1px solid black;">
+		<thead style="background-color:silver">
+						<tr>
+										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >Total</td>
+										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(total))"/></right></td>
+						</tr>
+		</thead>
+		</table>
+		</div>
+		</t> -->
+		<!-- <div class="row" ><div class="col-xs-12" >
+						   <center><h3></h3></center>
+						</div>   </div> -->
+		
+		<!-- <div class="row" style="border: 1px solid silver;background-color:silver"  >
+						
+						<div  class="col-xs-12">
+							<div class="col-xs-6" >
+						 <h4><u>Specific Terms &amp; Conditions:</u></h4>
+						</div>
+						
+						<div class="col-xs-offset-9" >
+						   <center><h4><u>الشروط الخاصة لعرض الأسعار</u></h4></center>
+						</div>
+						</div>
+		</div> -->
+		
+		<!-- <div >
+		<t t-set="count" t-value="1"/>
+		<t t-if="o.show_to_customer_payment">
+		<t t-foreach="o.payment_terms_line" t-as="l">
+				<div class="col-xs-12">
+					
+						<div  class="col-xs-12">
+							<div class="col-xs-4" >
+							<span t-esc="count"/> <t t-set="count" t-value="count + 1"/>.<span t-field="l.payment_name"/>
+						</div>
+						
+						<div class="col-xs-4" >
+						   <center><span t-field="l.payment_percentage" />%</center>
+						</div>
+						
+						<div><br/></div></div>
+				</div>
+		
+		</t>
+		</t>
+		</div> -->
+		<!-- <div >
+		<t t-set="count" t-value="1"/>
+		<t t-if="o.show_to_customer_credit">
+		<t t-foreach="o.credit_terms_line" t-as="l">
+				<div class="col-xs-12">
+					
+						<div  class="col-xs-12">
+							<div class="col-xs-4" >
+							<span t-esc="count"/> <t t-set="count" t-value="count + 1"/>.<span t-field="l.credit_period"/>
+						</div>
+						
+						<div class="col-xs-4">
+						   <center><span t-field="l.max_credit_amount" /></center>
+						</div>
+						<div class="col-xs-4">
+						   <center><span t-field="l.minimum_credit_amount" /></center>
+						</div>
+						
+						</div>
+				</div>
+		
+		</t>
+		</t>
+		</div> -->
+		</div>
+		
+		<div class="page">
+				<div class="col-xs-12">
+					<img src="data:image/jpeg;base64,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" alt="800ERP" style="width:200px; height:100px"/>
+				</div>
+		<!-- <t t-call="report.external_layout_header"> -->
+				<br/>
+				<div class="row" >
+					<div class="col-xs-12" >
+						<center><h3></h3></center>
+					</div>
+				</div>
+		
+			<div class="row" style="border: 1px solid silver;background-color:silver"  >
+				<div class="col-xs-12">
+					
+						<div class="col-xs-12" >
+						   <center><h4><span t-field="o.od_customer_id"/></h4></center>
+						</div>
+						</div>
+						<div class="col-xs-12">
+					
+						<div class="col-xs-12" >
+						   <center><h4><span t-field="o.name"/></h4></center>
+						</div>
+						</div>
+					
+					<div class="col-xs-12">
+					
+						<div  class="col-xs-12">
+							<div class="col-xs-4" >
+						   <center><h4>Reference No:</h4></center>
+						</div>
+						<div class="col-xs-4" >
+						   <center><h4><span t-field="o.number"/></h4></center>
+						</div>
+						<div class="col-xs-4" >
+						  <h4>:رقم العرض</h4>
+						</div>
+						</div>
+					</div>
+					<div class="col-xs-12">
+					
+						<div  class="col-xs-12">
+							<div class="col-xs-4" >
+						 <h4>Proposal Date:</h4>
+						</div>
+						<div class="col-xs-4" >
+						   <center><h4><span t-field="o.date" t-field-options='{"format": "dd/ MMMM/ yy"}'/></h4></center>
+						</div>
+						<div class="col-xs-offset-4" >
+						   <center><h4>:التاريخ</h4></center>
+						</div>
+						</div>
+					</div>
+			</div>
+			<div class="row">
+			<br/>
+				<div class="col-xs-12" style="border: 1px solid black;background-color:silver">
+					<div class="col-xs-4">
+						<u><b>Specific Terms &amp; Conditions</b></u>
+					</div>
+					<div class="col-xs-4">
+						
+					</div>
+					<div class="col-xs-4 text-right">
+						<right><u><b>الشروط الخاصة لعرض الأسعار</b></u></right>
+					</div>
+				</div>
+				<div class="col-xs-12" style="border: 1px solid black">
+					<br/>
+				</div>
+				<div class="col-xs-12" style="border-right: 1px solid black;border-left: 1px solid black">
+					<div class="col-xs-4">
+						<b>Proposal Validity from its date</b>
+					</div>
+					<div class="col-xs-4" style="border-left: 1px solid black;border-right: 1px solid black;border-top: 1px solid black;border-top: 1px solid black">
+						<center><b><span t-field="o.proposal_validity_duration"/></b></center>
+					</div>
+					<div class="col-xs-4 text-right">
+						<b>صلاحية العرض من تاريخه</b>
+					</div>
+				</div>
+				<div class="col-xs-12" style="border: 1px solid black">
+					<br/>
+				</div>
+				<div class="col-xs-12" style="border-right: 1px solid black;border-bottom: 1px solid black;border-left: 1px solid black">
+					<div class="col-xs-4">
+						<b>Payment Terms</b>
+					</div>
+					<div class="col-xs-4">
+						
+					</div>
+					<div class="col-xs-4 text-right">
+						<b>شروط الدفع</b>
+					</div>
+				</div>
+				
+				<!-- <div class="col-xs-12" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black">
+					<div class="col-xs-4">
+						<b>Material and Implementation</b>
+					</div>
+					<div class="col-xs-4">
+						
+					</div>
+					<div class="col-xs-4 text-right">
+						<b>المواد وخدمات التركيب</b>
+					</div>
+				</div> -->
+				<t t-foreach="o.payment_terms_line" t-as="l">
+				<div class="col-xs-12" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black">
+					<div class="col-xs-6" >
+						<span t-field="l.payment_name"/>
+					</div>
+					<div class="col-xs-6" style="border-left: 1px solid black;">
+						<center><span t-field="l.payment_percentage"/></center>
+					</div>
+					
+				</div>
+				</t>
+				<div class="col-xs-12" style="border: 1px solid black">
+					<br/>
+				</div>
+				<t t-if="o.show_to_customer_credit">
+		
+				<div class="col-xs-12" style="border-right: 1px solid black;border-bottom: 1px solid black;border-left: 1px solid black">
+					<div class="col-xs-4">
+						<b>Credit Terms</b>
+					</div>
+					<div class="col-xs-4">
+						
+					</div>
+					<div class="col-xs-4 text-right">
+						<b>شروط الائتمان</b>
+					</div>
+				</div>
+		
+				<div class="col-xs-12" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black">
+					<div class="col-xs-4" style="border-right: 1px solid black;">
+						<center>Credit Period</center>
+					</div>
+					<div class="col-xs-4" style="border-right: 1px solid black;">
+						<center>Maximum Credit Amount</center>
+					</div>
+					<div class="col-xs-4" >
+						<center>Minimum Credit Amount</center>
+					</div>
+				</div>
+				<div class="col-xs-12" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black">
+					<div class="col-xs-4" style="border-right: 1px solid black;">
+						<center>مدة الائتمان</center>
+					</div>
+					<div class="col-xs-4" style="border-right: 1px solid black;">
+						<center>الحد الأعلى للإئتمان</center>
+					</div>
+					<div class="col-xs-4" >
+						<center>الحد الأدنى للإئتمان</center>
+					</div>
+				</div>
+				<t t-foreach="o.credit_terms_line" t-as="l">
+				<div class="col-xs-12" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black">
+					<div class="col-xs-4" style="border-right: 1px solid black;">
+						<span t-field="l.credit_period"/>
+					</div>
+					<div class="col-xs-4" style="border-right: 1px solid black;">
+						<center><span t-field="l.max_credit_amount"/></center>
+					</div>
+					<div class="col-xs-4" >
+						<center><span t-field="l.minimum_credit_amount"/></center>
+					</div>
+				</div>
+				</t>
+				</t>
+				<!-- <div class="col-xs-12" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black">
+					<div class="col-xs-4">
+						Upon Material Delivery
+					</div>
+					<div class="col-xs-4" style="border-left: 2px solid black;border-right: 2px solid black;border-bottom: 1px solid black">
+						<center>40%</center>
+					</div>
+					<div class="col-xs-4 text-right">
+						دفعة عند توريد المواد
+					</div>
+				</div>
+				<div class="col-xs-12" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black;">
+					<div class="col-xs-4">
+						Upon Project Completion
+					</div>
+					<div class="col-xs-4" style="border-left: 2px solid black;border-right: 2px solid black;border-bottom: 1px solid black;border-top: 1px solid black">
+						<center>20%</center>
+					</div>
+					<div class="col-xs-4 text-right">
+						دفعة عند اتمام المشروع
+					</div>
+				</div>
+				<div class="col-xs-12" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black;">
+					<div class="col-xs-4">
+						Maintenance Contract / AMC
+					</div>
+					<div class="col-xs-4" style="border-left: 2px solid black;border-right: 2px solid black;border-bottom: 1px solid black;border-top: 1px solid black">
+						60% Upon Start of Maintenance, Remaining to be paid on equal values periodically at the beginning of each quarter
+					</div>
+					<div class="col-xs-4 text-right">
+				الصيانة دفعة مقدمة + بقية الدفعات تقسم بالتساوي
+					</div>
+				</div>
+				<div class="col-xs-12" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black;">
+					<div class="col-xs-4">
+						Warranty / Subscriptions / Licenses
+					</div>
+					<div class="col-xs-4" style="border-left: 2px solid black;border-right: 2px solid black;border-bottom: 1px solid black;border-top: 1px solid black">
+						In case Warranty Contract / Subscription Licenses are supplied independently then, 100% of its value to be paid advanced
+					</div>
+					<div class="col-xs-4 text-right">
+					   الضمان المصنعي / الاشتراكات / الرخص
+					</div>
+				</div> -->
+			</div>
+			
+		</div>
+																	   <!--PAGE 5 MATERIAL-->
+		
+		<div t-if="o.included_in_quotation">
+			<div class="page">
+			
+				<div class="row">
+					<div class="col-xs-12">
+						 <img src="data:image/jpeg;base64,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" alt="800ERP" style="width:200px; height:100px"/>
+					</div>
+					<br/>
+					<br/>
+					<br/>
+					<br/><br/><br/>
+				    <div class="row">
+					 <div class="col-xs-12">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<div class="col-xs-12">
+									  <center><h4><span t-field="o.od_customer_id"/></h4></center>
+								</div>				        
+							</div>
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<div class="col-xs-12">
+									  <center><h4><span t-field="o.name"/></h4></center>
+								</div>				        
+							</div>
+						
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+							<div  class="col-xs-12">
+								  <strong><center><h4>Bill of Material</h4></center></strong>
+							</div>	
+							
+						</div>
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+					
+							<div  class="col-xs-12">
+								<div class="col-xs-4" >
+									<center><h4>Reference No:</h4></center>
+								</div>
+								
+								<div class="col-xs-4" >
+									<center><h4><span t-field="o.number"/></h4></center>
+								</div>
+								
+								<div class="col-xs-4" >
+									<center><h4>:رقم العرض</h4></center>
+								</div>
+							</div>
+						
+						</div>
+						</div>
+					</div>
+					</div>
+					<br/>
+					
+				</div>	 
+			
+				  <!-- Main Proposal - Bill of Material -->
+			  
+				<div t-if="o.show_to_customer_main_proposal">
+				    <div class="row">
+					<div class="col-xs-12">				
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver" >
+						   <center><h3>Main Proposal - Bill of Material</h3></center>
+						</div>  					
+					</div>
+					</div>
+					<br/>
+						<t t-set="section" t-value="0"/>
+						<t t-foreach="o.mat_main_pro_line" t-as="p"><t t-if="p.section_id"><t t-set="section" t-value="1"/></t></t>
+						<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:8%">الرقم</th>
+										 <th class="text-center" style="border-left:1px solid black; width:25%">الشركة المصنعة</th>
+										 <th class="text-center" style="border-left:1px solid black; width:9%"><center> رقم القطعة</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:24%"><right>الوصف</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:4%"><center>النوع</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>وحدة القياس</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										 <!-- <th class="text-center" style="border-left:1px solid black; width:10%"><right>عملة</right></th> -->
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>سعر الوحدة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>السعر الإجمالي للسطر</center></th>
+									</tr>							
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:8%">Item</th>
+										 <th class="text-center" style="border-left:1px solid black; width:25%">Manufacturer</th>
+										 <th class="text-center" style="border-left:1px solid black; width:9%"><center> Product Part Number</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:24%"><right>Description</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:4%"><center>Type</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>UoM</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
+										 <!-- <th class="text-center" style="border-left:1px solid black; width:10%"><right>Curency</right></th> -->
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>Unit Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>Line Price</center></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+								    <t t-foreach="o.cost_section_line" t-as="q" >
+									    <tr style="border-bottom:1px solid black;border-top:1px solid black;">
+									       <td colspan="10"><span t-field="q.section"/>  <span t-field="q.name"/></td>
+										   <!-- </td><td/><td/><td/><td/><td/><td/><td/> -->
+									    </tr>
+									
+									    <tr t-foreach="o.mat_main_pro_line" t-as="l" >
+										    <t t-if="l.section_id.id==q.id">									 
+										    <td style="border-left:1px solid black;"><span t-field="l.item"/></td>
+										    <td style="border-left:1px solid black;"><span t-field="l.manufacture_id"/></td>
+										    <td style="border-left:1px solid black;"><center><span t-field="l.part_no"/></center></td>
+										    <td class="text-left" style="border-left:1px solid black;"><right><t t-esc="l.name "/></right></td>
+										    <td class="text-center" style="border-left:1px solid black;"><right><span t-field="l.types"/></right></td>
+										    <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.uom_id.name"/></right></td>
+										    <td class="text-right" style="border-left:1px solid black;"><right><span t-esc="l.qty"/></right></td>	
+										  <!-- <td class="text-right" style="border-left:1px solid black;"><right><span t-esc="l.sales_currency_id.name"/></right></td>	 -->
+										    <td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										    <td class="text-right" style="border-right:1px solid black;border-left:1px solid black"><right><span t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										   </t>
+									
+									    </tr>
+									
+								   </t>
+								<!-- 	<tr>
+												<td/><td/><td/><td/><td/><td/><td style="width:30%"></td>
+												<td style="border-right:1px solid black;width:50%"><strong>Total</strong></td>										
+												<td class="text-right" style="width:20;border-right:1px solid black"><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.mat_main_pro_line] )))"/></strong>  </td>
+									</tr>         -->
+								</tbody>
+									
+						</table>
+									
+				</div>
+			 
+					 <!-- Optional Items - Bill of Material -->
+				<div t-if="o.show_to_opt">
+		
+					<div class="row"  >
+					    <div class="col-xs-12">
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+						   <center><h3>Optional Items - Bill of Material</h3></center>
+						</div>  
+						</div> 
+					</div>	
+					<br/>
+					<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:8%">الرقم</th>
+										 <th class="text-center" style="border-left:1px solid black; width:25%">الشركة المصنعة</th>
+										 <th class="text-center" style="border-left:1px solid black; width:9%"><center> رقم القطعة</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:16%"><right>الوصف</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:4%"><center>النوع</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>وحدة القياس</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:8%"><right>الكمية</right></th>
+										 <!-- <th class="text-center" style="border-left:1px solid black; width:10%"><right>عملة</right></th> -->
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>سعر الوحدة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>السعر الإجمالي للسطر</center></th>
+									</tr>
+									<tr>
+										
+										<th class="text-center" style="border-left:1px solid black;width:8%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:25%">Manufacturer </th>
+										<th class="text-center" style="border-left:1px solid black; width:9%"><center> Product Part Number</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:16%"><right>Description</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:4%"><center>Type</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><center>UoM</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:8%"><right>Qty</right></th>
+										<!-- <th class="text-center" style="border-left:1px solid black; width:10%"><right>Curency</right></th> -->
+										<th class="text-center" style="border-left:1px solid black; width:14%"><right>Unit Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><center>Line Price</center></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+											<tr t-foreach="o.mat_optional_item_line" t-as="l" >
+												<td style="border-left:1px solid black;"><span t-field="l.item"/></td>
+												<td style="border-left:1px solid black;"><span t-field="l.manufacture_id"/></td>
+												<td style="border-left:1px solid black;"><center><span t-field="l.part_no"/></center></td>
+												<td class="text-left" style="border-left:1px solid black;"><right><t t-esc="l.name "/></right></td>
+												<td class="text-center" style="border-left:1px solid black;"><right><span t-field="l.types"/></right></td>
+												<td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.uom_id.name"/></right></td>
+												<td class="text-right" style="border-left:1px solid black;"><right><span t-esc="l.qty"/></right></td>	
+												<!-- <td class="text-right" style="border-left:1px solid black;"><right><span t-esc="l.sales_currency_id.name"/></right></td>	 -->
+												<td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+												  <td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+											</tr>
+											<!--	<tr>
+												<td/><td/><td/><td/><td/><td/><td style="width:30%"></td>
+												<td style="border-right:1px solid black;width:50%"><strong>Total</strong></td>	
+												<td class="text-right" style="width:50"><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.mat_optional_item_line] )))"/></strong>  </td>
+											
+											</tr>    -->
+								</tbody>
+					</table>
+															
+				</div>
+			
+				<!-- Material Extra Expense -->
+		
+				<div t-if="o.show_mat_ext_exp">
+		
+					<div class="row" >
+					    <div class="col-xs-12">
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver" >
+						   <center><h3>Material Extra Expense</h3></center>
+						</div>  
+						</div>
+					</div>	
+					 <br/>
+						<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;">الرقم</th>
+										<th class="text-center" style="border-left:1px solid black; ">مصروف</th>
+										<th class="text-center" style="border-left:1px solid black;"><right>الوصف</right></th>
+										<th class="text-center" style="border-left:1px solid black;"><right>الكمية</right></th>
+										<th class="text-center" style="border-left:1px solid black;"><right>سعر الوحدة</right></th>
+										<th class="text-center" style="border-left:1px solid black;"><center>السعر الإجمالي للسطر</center></th>
+									</tr>
+									<tr>
+										
+										<th class="text-center" style="border-left:1px solid black;">Item</th>
+										<th class="text-center" style="border-left:1px solid black; ">Expense </th>
+										<th class="text-center" style="border-left:1px solid black;"><right>Description</right></th>
+										<th class="text-center" style="border-left:1px solid black;"><right>Qty</right></th>
+										<th class="text-center" style="border-left:1px solid black;"><right>Unit Price</right></th>
+										<th class="text-center" style="border-left:1px solid black;"><center>Line Price</center></th>
+										
+										
+									</tr>
+									
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+								
+											<tr t-foreach="o.mat_extra_expense_line" t-as="l" >
+											
+												<td style="border-left:1px solid black;"><span t-field="l.item"/></td>
+												<td style="border-left:1px solid black;"><span t-field="l.od_product_id"/></td>
+												<td class="text-right" style="border-left:1px solid black;"><right><t t-esc="l.name "/></right></td>
+												<td class="text-right" style="border-left:1px solid black;"><right><span t-esc="l.qty"/></right></td>
+												<td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price2))"/></right></td>
+												<td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.line_price2))"/></right></td>
+												
+											</tr>
+									
+										<!--	<tr>
+												<td/><td/><td/><td ></td>
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price2 for oal in o.mat_extra_expense_line] )))"/></strong>  </td>
+											  
+											</tr>      -->
+								</tbody>
+						</table>
+								   
+				</div>
+				
+				<!-- Material Delivery Terms -->
+				
+				<div t-if="o.show_to_customer_mat_delivery">
+						   
+					<div class="row"  >
+					    <div class="col-xs-12">
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+						   <center><h3>Material Delivery Terms</h3></center>
+						</div>  
+						</div>
+					</div>	         
+					<br/>    
+						   
+					<div class="row" >
+					    <div class="col-xs-12">
+							<div class="col-xs-12" style="border:1px solid black;">
+							   <span t-field="o.material_delivery_terms"/>
+							</div>
+                        </div>							
+					</div>		
+				
+				
+				</div>
+				<br/>
+				<!-- Material Notes -->
+				
+				<!-- <div t-if="o.show_to_customer_material_notes">
+					
+					<div class="row" >
+					   <div class="col-xs-12">
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver" >
+						   <center><h3>Material Notes</h3></center>
+						</div>  
+					   </div>	
+					</div>	         
+					<br/> 
+				
+					<div class="row" >
+					    <div class="col-xs-12">
+							<div class="col-xs-12" style="border:1px solid black;">
+							   <span t-field="o.material_notes"/>
+							</div>   
+						</div>	
+					</div>		
+				
+				
+				</div> --><br/>
+			</div>
+		</div>
+												<!--PAGE 6 REN-->
+		<div t-if="o.included_in_quotation_ren">
+			<div class="page">
+			
+				<div class="row">
+					<div class="col-xs-12">
+						 <img src="data:image/jpeg;base64,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" alt="800ERP" style="width:200px; height:100px"/>
+					</div>
+					<br/>
+	<br/>
+	<br/>
+	<br/><br/><br/>
+				
+					 <div class="row">
+						<div class="col-xs-12">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<div class="col-xs-12">
+									<center><h4><span t-field="o.od_customer_id"/></h4></center>
+								</div>
+							</div>
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<div class="col-xs-12">
+									<center><h4><span t-field="o.name"/></h4></center>
+								</div>
+							</div> 
+						
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver"  >
+							<div  class="col-xs-12">
+								  <strong><center><h4>Renewals</h4></center></strong>
+							</div>	
+							
+						</div>
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver"  >
+					
+							<div  class="col-xs-12">
+								<div class="col-xs-4" >
+									<center><h4>Reference No:</h4></center>
+								</div>
+								
+								<div class="col-xs-4" >
+									<center><h4><span t-field="o.number"/></h4></center>
+								</div>
+								
+								<div class="col-xs-4" >
+									<center><h4>:رقم العرض</h4></center>
+								</div>
+							</div>
+						
+						</div>
+						</div>
+						</div>
+					</div>
+					<br/>
+					
+				</div>	 
+			
+				  <!-- Main Proposal - Renewals -->
+			  
+				<div t-if="o.show_to_customer_ren_main">
+					<div class="row">
+                        <div class="col-xs-12">					
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+						   <center><h3>Main Proposal - Renewals Serial Numbers/Licenses</h3></center>
+						</div>  
+						</div>
+					</div>	
+					<br/>
+						<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:8%">الرقم</th>
+										 <th class="text-center" style="border-left:1px solid black; width:25%">الشركة المصنعة</th>
+										 <th class="text-center" style="border-left:1px solid black; width:9%"><center>رقم حزمة التجديد</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>تنطبق على</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:4%"><center>الرقم المتسلسل</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>المدينة</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>الموقع</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>تاريخ البدء</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>تاريخ الانتهاء</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>الملاحظات</right></th>
+									</tr>							
+									<tr>
+										 <th class="text-center" style="border-left:1px solid black;width:8%">Item</th>
+										 <th class="text-center" style="border-left:1px solid black; width:14%">Manufacturer</th>
+										 <th class="text-center" 	style="border-left:1px solid black; width:9%"><center> Renewal Package No</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>Applicable To</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:8%"><center>Serial No</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>City</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Location</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Start Date</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Expiry Date</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:25%"><right>Notes</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									 <tr t-foreach="o.ren_main_pro_line" t-as="l" >
+										 <td style="border-left:1px solid black;"><span t-field="l.item"/></td>
+										<td style="border-left:1px solid black;"><span t-field="l.manufacture_id"/></td>
+										 <td style="border-left:1px solid black;"><center><span t-field="l.renewal_package_no"/></center></td>
+										 <td class="text-right" style="border-left:1px solid black;"><right><t t-esc="l.product_p_n.name"/></right></td>
+										  <td class="text-center" style="border-left:1px solid black;"><right>
+										  	<t t-if="l.serial_no">
+											  	<span t-esc="l.serial_no[:10]"/><br/>
+											  	<span t-esc="l.serial_no[10:20]"/>
+											  </t>
+										  </right></td>
+										 <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.city_id.name"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;"><right><span t-esc="l.location"/></right></td>	
+										  <td class="text-center" style="border-left:1px solid black;"><right><span t-field="l.start_date"/></right></td>	
+										 <td class="text-center" style="border-left:1px solid black;"><right><span t-field="l.expiry_date"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;"><right>
+										 	<t t-if="l.notes">
+										 		<span t-esc="l.notes[:25]"/><br/>
+										 		<span t-esc="l.notes[25:50]"/>
+										 		<span t-esc="l.notes[50:200]"/>
+										 	</t>
+										 </right></td>
+									</tr>
+									
+								</tbody>
+									
+						</table>
+									
+				</div>
+			 
+					 <!-- Optional Items - Renewals -->
+				<div t-if="o.show_to_customer_ren_optional">
+		
+					<div class="row">
+					    <div class="col-xs-12">
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver" >
+						   <center><h3>Optional Items - Renewals Serial Numbers/Licenses</h3></center>
+						</div>  
+						</div>
+					</div>	
+					<br/>
+					<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:8%">الرقم</th>
+										 <th class="text-center" style="border-left:1px solid black; width:25%">الشركة المصنعة</th>
+										 <th class="text-center" style="border-left:1px solid black; width:9%"><center>رقم حزمة التجديد</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>تنطبق على</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:4%"><center>الرقم المتسلسل</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>المدينة</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>الموقع</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>تاريخ البدء</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>تاريخ الانتهاء</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>الملاحظات</right></th>
+									</tr>
+									<tr>
+										 <th class="text-center" style="border-left:1px solid black;width:8%">Item</th>
+										 <th class="text-center" style="border-left:1px solid black; width:25%">Manufacturer</th>
+										 <th class="text-center" style="border-left:1px solid black; width:9%"><center> Renewal Package No</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>Applicable To</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:4%"><center>Serial No</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>City</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Location</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Start Date</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>Expiry Date</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>Notes</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+											<tr  t-foreach="o.ren_optional_item_line" t-as="l" >
+											<td style="border-left:1px solid black;"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;"><span t-field="l.manufacture_id"/></td>
+										 <td style="border-left:1px solid black;"><center><span t-field="l.renewal_package_no"/></center></td>
+										 <td class="text-right" style="border-left:1px solid black;"><right><t t-esc="l.product_p_n.name"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;"><right><span t-field="l.serial_no"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;"><right><t t-esc="l.city_id.name"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;"><right><span t-esc="l.location"/></right></td>	
+										  <td class="text-right" style="border-left:1px solid black;"><right><span t-esc="l.start_date" t-esc-options='{"format": "dd-MMM-yyyy"}'/></right></td>	
+										 <td class="text-right" style="border-left:1px solid black;"><right><span t-field="l.expiry_date"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;"><right><span t-field="l.notes"/></right></td>
+										 </tr>
+												
+								</tbody>
+					</table>
+															
+				</div>
+			
+				<!-- Renewal Notes -->
+		
+				<div t-if="o.show_to_customer_ren_notes">
+		
+					<div class="row">
+					  <div class="col-xs-12">
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver" >
+						   <center><h3>Renewal Notes</h3></center>
+						</div>  
+				       </div>
+					</div>	
+					 <br/>
+					<div class="row" >
+					    <div class="col-xs-12">
+						<div class="col-xs-12" style="border: 1px solid black;">
+					  <span t-field="o.renewal_quotes"/>
+						</div>
+						</div>
+					</div>			   
+				</div>
+				
+			  
+			</div>
+			</div>
+												<!--PAGE7  TRN-->
+			<div t-if="o.included_trn_in_quotation">
+			<div class="page">
+			
+				<div class="row">
+					<div class="col-xs-12">
+						 <img src="data:image/jpeg;base64,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" alt="800ERP" style="width:200px; height:100px"/>
+					</div>
+					<br/>
+	<br/>
+	<br/>
+	<br/><br/><br/>
+				
+					 <div class="row">
+						<div class="col-xs-12">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver" >
+								<div class="col-xs-12">
+									<center><h4><span t-field="o.od_customer_id"/></h4></center>
+								</div>
+							</div>
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver" >
+								<div class="col-xs-12">
+									<center><h4><span t-field="o.name"/></h4></center>
+								</div>
+							</div>
+						
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver" >
+							<div  class="col-xs-12">
+								  <strong><center><h4>Training</h4></center></strong>
+							</div>	
+							
+						</div>
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver" >
+					
+							<div  class="col-xs-12">
+								<div class="col-xs-4" >
+									<center><h4>Reference No:</h4></center>
+								</div>
+								
+								<div class="col-xs-4" >
+									<center><h4><span t-field="o.number"/></h4></center>
+								</div>
+								
+								<div class="col-xs-4" >
+									<center><h4>:رقم العرض</h4></center>
+								</div>
+							</div>
+						
+						</div>
+						</div>
+						</div>
+					</div>
+					<br/>
+					
+				</div>	 
+			
+				  <!-- Main Proposal - Renewals -->
+			  
+				<div t-if="o.show_customer_trn_training_details">
+					<div class="row">
+					    <div class="col-xs-12">
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+						   <center><h3>Customer Training Details</h3></center>
+						</div>
+						</div>
+					</div>	
+					<br/>
+						<t t-set="section" t-value="0"/>
+						<t t-foreach="o.trn_customer_training_line" t-as="p"><t t-if="p.section_id"><t t-set="section" t-value="1"/></t></t>
+						<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">الرقم</th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%">مركز التدريب</th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>رقم التدريب</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:35%"><right>الوصف</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>النوع</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:5%"><center>وحدة القياس</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%">Training Center</th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center> Training No</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:35%"><right>Description</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>Type</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:5%"><center>UoM</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>	
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.trn_customer_training_line" t-as="l">
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:10%"><span t-field="l.manufacture_id"/></td>
+										 <td style="border-left:1px solid black;width:10%"><span t-field="l.part_no"/></td>
+										 <td class="text-left" style="border-left:1px solid black;width:35%"><t t-esc="l.name "/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><span t-field="l.types"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.uom_id.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><span t-esc="l.qty"/></td>	
+										  <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>	
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/><td ></td>
+												<td/><td/><td ></td>
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.trn_customer_training_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+									
+						</table>
+									
+				</div>
+			 <!-- Training Terms & Conditions-->
+		
+				<div t-if="o.show_customer_trn_terms_condition">
+		
+					<div class="row"  >
+					<div class="col-xs-12">
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+						   <center><h3>Training Terms &amp; Conditions</h3></center>
+						</div>  
+						</div>
+					</div>	
+					 <br/>
+					  <div class="row" >
+					    <div class="col-xs-12">
+						<div class="col-xs-12" style="border: 1px solid black;">
+					  <span t-field="o.trn_terms_condition"/>
+						</div>
+						</div>
+						</div>
+								   
+				</div>
+				<br/>
+					 <!-- Optional Items - Renewals -->
+				<div t-if="o.show_trn_training_extra_expenses">
+		
+					<div class="row" >
+					    <div class="col-xs-12">
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver" >
+						   <center><h3>Training Extra Expenses</h3></center>
+						</div>  
+						</div>
+					</div>	
+					<br/>
+					<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%">مصروف</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>الوصف</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>تكلفة الوحدة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>خط التكلفة</right></th>
+									</tr>							
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%">Expense</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>Description</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Cost</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Cost</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.trn_customer_training_extra_expense_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:15%"><span t-field="l.od_product_id"/></td>
+										 <td style="border-left:1px solid black;width:50%"><center><span t-field="l.name"/></center></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.qty "/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.unit_cost_local))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_cost_local))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/><td ></td>
+											
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_cost_local for oal in o.trn_customer_training_extra_expense_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table>
+															
+				</div>
+			
+				
+				
+			  
+			</div>
+			</div>
+															<!--PAGE 8  IMP BIM AND OIM -->
+			<div t-if="o.included_bim_in_quotation">
+				<div class="page">
+			
+				<div class="row">
+					<div class="col-xs-12">
+						 <img src="data:image/jpeg;base64,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" alt="800ERP" style="width:200px; height:100px"/>
+					</div>
+					<br/>
+					<br/>
+					<br/>
+					<br/><br/><br/>
+				
+					<div class="row">
+						<div class="col-xs-12">
+						    <div class="col-xs-12">
+							    <div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								    <div class="col-xs-12">
+								        <center><h4><span t-field="o.od_customer_id"/></h4></center>
+									</div>
+								</div>	
+								<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+									<div class="col-xs-12">
+										<center><h4><span t-field="o.name"/></h4></center>
+									</div>
+								</div>
+								<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+									<div  class="col-xs-12">
+										<strong><center><h4>Implementation</h4></center></strong>
+									</div>			
+								</div>
+								<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+									<div  class="col-xs-12">
+										<div class="col-xs-4" >
+											<center><h4>Reference No:</h4></center>
+										</div>	
+										<div class="col-xs-4" >
+											<center><h4><span t-field="o.number"/></h4></center>
+										</div>
+										<div class="col-xs-4" >
+											<center><h4>:رقم العرض</h4></center>
+										</div>
+									</div>
+								</div>
+						    </div>
+						</div>
+					</div>
+					<br/>
+					
+				</div>	 
+				
+			 <!--Exclusions from Beta IT Scope of work-->
+		
+				<div t-if="o.show_customer_bim_exclusion">
+		
+					<div class="row" >
+					  <div class="col-xs-12">
+						<div class="col-xs-6" style="border: 1px solid silver;background-color:silver">
+						   <h4>Exclusions from Beta IT Scope of Work</h4>
+						</div>  
+						<div class="col-xs-6 text-right" style="border: 1px solid silver;background-color:silver">
+						   <h4>(الاستثناءات (ما ليس ضمن نطاق أعمال بيتا</h4>
+						</div>
+					  </div>
+					</div>	
+					 <br/>
+					    <div class="row">
+					        <div class="col-xs-12">
+						        <div class="col-xs-12" style="border: 1px solid black;">
+					            <span t-field="o.bim_exclusion_note"/>
+								</div>
+							</div>	
+						</div>
+								   
+				</div>
+				<br/>
+					 <!-- bim inclusions-->
+					 
+					 
+				<div t-if="o.show_customer_bim_inclusion">
+		
+					<div class="row">
+					   <div class="col-xs-12">
+						<div class="col-xs-6"  style="border: 1px solid silver;background-color:silver">
+						   <h4>Inclusions from Beta IT Scope of Work</h4>
+						</div>  
+						<div class="col-xs-6 text-right"  style="border: 1px solid silver;background-color:silver">
+						   <right><h4>نطاق أعمال بيتا</h4></right>
+						</div>
+						</div>
+					</div>	
+					<br/>
+					<div class="row">
+					    <div class="col-xs-12">
+					        <div class="col-xs-12" style="border: 1px solid black;">
+					            <span t-field="o.bim_inclusion_note"/>
+						    </div>
+						</div>
+                    </div>						
+				</div>
+				<br/>
+				
+				
+			   <!-- Beta IT Implementation Extra Expenses -->
+			   
+			   
+				<div t-if="o.show_bim_extra_exp">
+					<div class="row">
+					    <div class="col-xs-12">
+							<div class="col-xs-6" style="border: 1px solid silver;background-color:silver">
+								<h4>Beta IT Implementation Extra Expenses</h4>
+							</div>  
+							<div class="col-xs-6 text-right" style="border: 1px solid silver;background-color:silver">
+								
+							</div>
+						</div>	
+					</div>	
+					<br/>
+					<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">
+									<tr>									
+										<th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>الوصف</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>							
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:55%"><center>Description</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><center>Qty</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><center>Unit Price</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><center>Line Price</center></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.implimentation_extra_expense_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:55%"><center><span t-field="l.name"/></center></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.qty "/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td ></td>
+											
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.implimentation_extra_expense_line] )))"/></strong>  </td>
+					  
+									</tr>
+								</tbody>
+					</table>
+				</div>
+				
+				
+				
+				<!-- manpower calculations-->
+				
+				<div t-if="o.show_customer_bim_manpower_calc">		
+					<div class="row">
+					    <div class="col-xs-12">
+							<div class="col-xs-6" style="border: 1px solid silver;background-color:silver">
+								<h4>Beta IT Special Professional Services Rate</h4>
+							</div>  
+							<div class="col-xs-6 text-right" style="border: 1px solid silver;background-color:silver">
+								<right><h4>أسعار الخدمة الفنية الخاصة من بيتا</h4></right>
+							</div>
+						</div>	
+					</div>	
+					<br/>
+					<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>الوصف</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>							
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:55%"><center>Description</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><center>Qty</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><center>Unit Price</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><center>Line Price</center></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.manpower_manual_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:55%"><center><span t-field="l.name"/></center></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.qty "/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td ></td>
+											
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.manpower_manual_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table>
+															
+				</div>
+				
+				
+				<!-- Beta IT ManPower Using Implementation Codes -->
+				
+				<div t-if="o.show_imp_code">
+					<div class="row">
+					    <div class="col-xs-12">
+							<div class="col-xs-6" style="border: 1px solid silver;background-color:silver">
+								<h4>Beta IT ManPower Using Implementation Codes</h4>
+							</div>  
+							<div class="col-xs-6 text-right" style="border: 1px solid silver;background-color:silver">
+							</div>
+						</div>	
+					</div>	
+					<br/>
+					<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>الوصف</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>							
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										 <th class="text-center" style="border-left:1px solid black; width:55%"><center>Implimentation Code</center></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><center>Qty</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%"><center>Unit Price</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%"><center>Line Price</center></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.bim_implementation_code_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:55%"><center><span t-field="l.imp_code"/></center></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.qty "/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td ></td>
+											
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.bim_implementation_code_line])))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table>
+				
+				</div>
+				
+				
+				<!-- Outsourced Implementation Price Calculation -->
+				
+				<div t-if="o.show_oim_outsourced_price">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Outsourced Implementation Price Calculation</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%">شريك</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>الوصف</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%">Partner</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>Description</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.oim_implimentation_price_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:15%"><span t-field="l.partner_id"/></td>
+										 <td style="border-left:1px solid black;width:50%"><center><span t-field="l.name"/></center></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty "/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/><td ></td>
+											
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.oim_implimentation_price_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table>
+															
+				</div>
+				
+				
+				<!-- Outsourced Implementation Extra Expenses -->
+				
+				
+				<div t-if="o.show_oim_extra_exp">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Outsourced Implementation Extra Expenses</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>الوصف</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>Description</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.oim_extra_expenses_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:50%"><center><span t-field="l.name"/></center></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty "/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td ></td>
+											
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.oim_extra_expenses_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table>
+				
+				</div>
+				
+			</div>
+			</div>
+													<!--OIM PAGE 9-->
+												<!--PAGE 10 BMN-->
+			<div t-if="o.included_bmn_in_quotation">
+			<div class="page">
+			
+				<div class="row">
+					<div class="col-xs-12">
+						 <img src="data:image/jpeg;base64,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" alt="800ERP" style="width:200px; height:100px"/>
+					</div>
+					<br/>
+	<br/>
+	<br/>
+	<br/><br/><br/>
+				
+					 <div class="row">
+						<div class="col-xs-12" >
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver" >
+								<div class="col-xs-12">
+									<center><h4><span t-field="o.od_customer_id"/></h4></center>
+								</div>
+							</div>
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<div class="col-xs-12">
+								   <center><h4><span t-field="o.name"/></h4></center>
+								</div>
+							</div>
+					   
+						
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+							<div  class="col-xs-12">
+								  <strong><center><h4>Beta Maintenance</h4></center></strong>
+							</div>	
+							
+						</div>
+						<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+					
+							<div  class="col-xs-12">
+								<div class="col-xs-4" >
+									<center><h4>Reference No:</h4></center>
+								</div>
+								
+								<div class="col-xs-4" >
+									<center><h4><span t-field="o.number"/></h4></center>
+								</div>
+								
+								<div class="col-xs-4" >
+									<center><h4>:رقم العرض</h4></center>
+								</div>
+							</div>
+						
+						</div>
+						</div>
+						</div>
+					</div>
+					<br/>
+					
+				</div>
+
+				<!-- Holidays   -->
+							<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:15%">Month or Year	</th>
+										<th class="text-center" style="border-left:1px solid black;width:8%">Number</th>
+										<th class="text-center" style="border-left:1px solid black;width:15%">Level</th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Public Holidays</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Start Date</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>End Date</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:35%"><right>Comments</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr>
+										 <td style="border-left:1px solid black;width:5%"><center><span t-field="o.bmn_year_month"/></center></td>
+										 <td style="border-left:1px solid black;width:15%"><center><span t-field="o.bmn_number"/></center></td>
+										 <td style="border-left:1px solid black;width:15%"><center><span t-field="o.bmn_level"/></center></td>
+										 <t t-if="o.bmn_public_holiday">
+											<td style="border-left:1px solid black;width:10%"><center>YES</center></td>
+										 </t>
+										 <t t-if="not o.bmn_public_holiday">
+											<td style="border-left:1px solid black;width:10%"><center>NO</center></td>
+										 </t>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><center><t t-esc="o.bmn_start_date"/></center></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><center><span t-esc="o.bmn_end_date"/></center></td>
+										 <td class="text-left" style="border-left:1px solid black;width:35%"><t t-esc="o.bmn_comment"/></td>
+									</tr>
+								</tbody>
+							</table>    			
+				
+				
+				<!-- Scope of Beta IT Maintenance -->
+				<div t-if="o.show_bmn_scope_maintanance">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-6" style="border: 1px solid silver;background-color:silver">
+								<h4>Scope of Beta IT Maintenance</h4>
+							</div>  
+							<div class="col-xs-6 text-right" style="border: 1px solid silver;background-color:silver">
+								<h4> نطاق أعمال الصيانة</h4>
+							</div>
+						</div>	
+					</div>	
+					<br/>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border:1px solid black;">
+								<center><span t-field="o.bmn_beta_it_maintanance"/></center>
+							</div>
+						</div>
+					</div>
+					<br/>										
+				</div>
+				<br/>
+				
+				
+				
+				
+			 <!--Exclusions from Beta IT Scope of work-->
+		
+				<div t-if="o.show_bmn_it_preventive_line">
+		
+					<div class="row">
+					    <div class="col-xs-12">
+					    <div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+						<div class="col-xs-12">
+						   <center><h3>Beta IT Preventive Maintenance Cost</h3></center>
+						</div>  
+						</div>
+						</div>
+					</div>	
+					 <br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">الرقم</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>الوصف</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>Description</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.bmn_it_preventive_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:15%"><span t-field="l.description"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/>
+											
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.bmn_it_preventive_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table>  
+				</div>
+				<br/>
+					 <!-- bim inclusions-->
+				<div t-if="o.show_bmn_it_remedial_line">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Beta IT Remedial Maintenance Cost</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">الرقم</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>الوصف</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>Description</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.bmn_it_remedial_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:15%"><span t-field="l.name"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.qty"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/>
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.bmn_it_remedial_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table> 							
+				</div>
+			<br/>
+			  
+				<div t-if="o.show_to_cust_bmn_beta_spareparts">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Spare Parts for Beta IT Maintenace</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الشركة المصنعة</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>رقم القطعة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:35%"><right>الوصف</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>النوع</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:5%"><right>وحدة القياس</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Manufacturer</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Product Part NO</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:35%"><right>Description</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Type</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:5%"><right>UoM</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.bmn_spareparts_beta_it_maintenance_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:10%"><span t-field="l.manufacture_id"/></td>
+										 <td style="border-left:1px solid black;width:10%"><span t-field="l.part_no"/></td>
+										 <td style="border-left:1px solid black;width:35%"><span t-field="l.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><span t-field="l.types"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><span t-field="l.uom_id.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.qty"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/><td ></td>
+												<td/><td/><td/>
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.bmn_spareparts_beta_it_maintenance_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table> 							
+				</div>
+				<br/>
+				<div t-if="o.show_to_cust_bmn_maintanance">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Beta IT Maintenance Extra Expenses</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										 <th class="text-center" style="border-left:1px solid black;width:10%">مصروف</th>
+										<th class="text-center" style="border-left:1px solid black; width:45%"><right>الوصف</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										 <th class="text-center" style="border-left:1px solid black;width:10%">Expense</th>
+										<th class="text-center" style="border-left:1px solid black; width:45%"><right>Description</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.bmn_beta_it_maintenance_extra_expense_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:10%"><span t-field="l.od_product_id"/></td>
+										 <td style="border-left:1px solid black;width:45%"><span t-field="l.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.qty"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/><td ></td>
+											
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.bmn_beta_it_maintenance_extra_expense_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table> 							
+				</div>
+				<br/>
+				<br/>
+				<div t-if="o.show_to_customer_bmn_eqp">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Equipment Covered by The Scope of Service</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										 <th class="text-center" style="border-left:1px solid black;width:15%">صناعة</th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>رقم القطعة</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>رقم سري</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%"><right>المدينة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>موقع</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:25%"><right>الملاحظات</right></th>
+									</tr>
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										 <th class="text-center" style="border-left:1px solid black;width:15%">Manufacture</th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>Part NO</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Serial NO</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%"><right>City</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Location</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:25%"><right>Notes</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.bmn_eqp_cov_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:15%"><span t-field="l.manufacture_id"/></td>
+										 <td style="border-left:1px solid black;width:15%"><span t-field="l.product_p_n.name"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.serial_no"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-field="l.city_id.name"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.location"/></right></td>
+										 <td align="left" style="border-left:1px solid black;width:25%"><right><t t-esc="l.notes"/></right></td>
+									</tr>
+									
+								</tbody>
+					</table> 							
+				</div>
+				<br/>
+				<div t-if="o.show_to_cust_omn_maintance_price">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Outsourced Preventive Maintenance Price</h3></center>
+							</div>  
+						</div>
+					</div>	
+					 <br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>الوصف</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>Description</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.omn_out_preventive_maintenance_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:15%"><span t-field="l.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/>
+											
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.omn_out_preventive_maintenance_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table>  
+				</div>
+				<br/>
+				<div t-if="o.show_to_cust_omn_remedial_maintenance">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Outsourced Remedial Maintenance Price</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>الوصف</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>Description</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.omn_out_remedial_maintenance_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:15%"><span t-field="l.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/>
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.omn_out_remedial_maintenance_line])) )"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table> 							
+				</div>
+				<br/>
+				<div t-if="o.show_to_cust_spare_parts">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Spare Parts for Outsourced Maintenace</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الشركة المصنعة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>رقم القطعة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:35%"><right>الوصف</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>النوع</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>وحدة القياس</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Manufacturer</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Product Part NO</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:35%"><right>Description</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Type</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>UoM</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.omn_spare_parts_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:10%"><span t-field="l.manufacture_id"/></td>
+										 <td style="border-left:1px solid black;width:10%"><span t-field="l.part_no"/></td>
+										 <td style="border-left:1px solid black;width:35%"><span t-field="l.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><span t-field="l.types"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><span t-field="l.uom_id.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="l.qty"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/><td ></td>
+												<td/><td/><td/>
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.omn_spare_parts_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table> 							
+				</div>
+				<br/>
+				<div t-if="o.show_to_cust_omn_maintanance">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Outsourced Maintenance Extra Expenses</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>	
+										<th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black;width:10%">مصروف</th>
+										<th class="text-center" style="border-left:1px solid black; width:45%"><right>الوصف</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>	
+										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black;width:10%">Expense</th>
+										<th class="text-center" style="border-left:1px solid black; width:45%"><right>Description</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.omn_maintenance_extra_expense_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:10%"><span t-field="l.od_product_id"/></td>
+										 <td style="border-left:1px solid black;width:45%"><span t-field="l.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.qty"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/><td ></td>
+											
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.omn_maintenance_extra_expense_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table> 							
+				</div>
+				<br/>
+				<div t-if="o.show_to_customer_omn_eqp">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Equipment Covered by The Scope of Service</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>	
+										<th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black;width:25%">صناعة</th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>رقم القطعة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>رقم سري</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>المدينة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>موقع</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>الملاحظات</right></th>
+									</tr>
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										 <th class="text-center" style="border-left:1px solid black;width:25%">Manufacture</th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>Part NO</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Serial NO</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%"><right>City</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Location</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%"><right>Notes</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.omn_eqp_cov_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:25%"><span t-field="l.manufacture_id"/></td>
+										 <td style="border-left:1px solid black;width:15%"><span t-field="l.product_p_n.name"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.serial_no"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-field="l.city_id.name"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.location"/></right></td>
+										 <!-- <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-field="l.notes"/></right></td> -->
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.notes"/></td>	
+									</tr>
+									
+								</tbody>
+					</table> 							
+				</div>
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			</div>
+												<!--PAGE 11 OMN-->
+			<!-- <div t-if="o.included_omn_in_quotation">
+			<div class="page">
+			
+				<div class="row">
+					<div class="col-xs-12">
+						 <img src="data:image/jpeg;base64,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" alt="800ERP" style="width:200px; height:100px"/>
+					</div>
+					<br/>
+	<br/>
+	<br/>
+	<br/><br/><br/>
+				
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12">
+								<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+									<div class="col-xs-12">
+										<center><h4><span t-field="o.od_customer_id"/></h4></center>
+									</div>
+								</div>
+								<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+									<div class="col-xs-12">
+										<center><h4><span t-field="o.name"/></h4></center>
+									</div>
+								</div>
+								<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+									<div  class="col-xs-12">
+										<strong><center><h4>Outsourced Maintenace</h4></center></strong>
+									</div>	
+								</div>
+								<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+									<div  class="col-xs-12">
+										<div class="col-xs-4" >
+											<center><h4>Reference No:</h4></center>
+										</div>
+										<div class="col-xs-4" >
+											<center><h4><span t-field="o.number"/></h4></center>
+										</div>
+										<div class="col-xs-4" >
+											<center><h4>:رقم العرض</h4></center>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</div>
+					<br/>
+					
+				</div>
+
+				Holidays  
+					<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:15%">Month or Year	</th>
+										<th class="text-center" style="border-left:1px solid black;width:8%">Number</th>
+										<th class="text-center" style="border-left:1px solid black;width:15%">Level</th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Public Holidays</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Start Date</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>End Date</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:35%"><right>Comments</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr>
+										 <td style="border-left:1px solid black;width:5%"><center><span t-field="o.omn_year_month"/></center></td>
+										 <td style="border-left:1px solid black;width:15%"><center><span t-field="o.omn_number"/></center></td>
+										 <td style="border-left:1px solid black;width:15%"><center><span t-field="o.omn_level"/></center></td>
+										 <t t-if="o.omn_public_holiday">
+											<td style="border-left:1px solid black;width:10%"><center>YES</center></td>
+										 </t>
+										  <t t-if="not o.omn_public_holiday">
+											<td style="border-left:1px solid black;width:10%"><center>NO</center></td>
+										 </t>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><center><t t-esc="o.omn_start_date"/></center></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><center><span t-esc="o.omn_end_date"/></center></td>
+										 <td class="text-left" style="border-left:1px solid black;width:35%"><t t-esc="o.omn_comment"/></td>
+									</tr>
+								</tbody>
+					</table>
+						
+				
+			 Exclusions from Beta IT Scope of work
+		
+				<div t-if="o.show_to_cust_omn_maintance_price">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Outsourced Preventive Maintenance Price</h3></center>
+							</div>  
+						</div>
+					</div>	
+					 <br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>الوصف</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>Description</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.omn_out_preventive_maintenance_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:15%"><span t-field="l.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/>
+											
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.omn_out_preventive_maintenance_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table>  
+				</div>
+				<br/>
+					 bim inclusions
+				<div t-if="o.show_to_cust_omn_remedial_maintenance">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Outsourced Remedial Maintenance Price</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>الوصف</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:50%"><right>Description</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.omn_out_remedial_maintenance_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:15%"><span t-field="l.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/>
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.omn_out_remedial_maintenance_line])) )"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table> 							
+				</div>
+				<br/>
+			  <div t-if="o.show_to_cust_remarks">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Scope of Outsourced Maintenance</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border:1px solid black;">
+								<span t-field="o.omn_remarks"/>
+							</div>
+						</div>		
+					</div>
+					<br/>										
+				</div>
+				<br/>
+				<div t-if="o.show_to_cust_spare_parts">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Spare Parts for Outsourced Maintenace</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الشركة المصنعة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>رقم القطعة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:35%"><right>الوصف</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>النوع</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>وحدة القياس</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Manufacturer</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Product Part NO</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:35%"><right>Description</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Type</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>UoM</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.omn_spare_parts_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:10%"><span t-field="l.manufacture_id"/></td>
+										 <td style="border-left:1px solid black;width:10%"><span t-field="l.part_no"/></td>
+										 <td style="border-left:1px solid black;width:35%"><span t-field="l.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><span t-field="l.types"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><span t-field="l.uom_id.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="l.qty"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/><td ></td>
+												<td/><td/><td/>
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.omn_spare_parts_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table> 							
+				</div>
+				<br/>
+				<div t-if="o.show_to_cust_omn_maintanance">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Outsourced Maintenance Extra Expenses</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>	
+										<th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black;width:10%">مصروف</th>
+										<th class="text-center" style="border-left:1px solid black; width:45%"><right>الوصف</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>	
+										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black;width:10%">Expense</th>
+										<th class="text-center" style="border-left:1px solid black; width:45%"><right>Description</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.omn_maintenance_extra_expense_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:10%"><span t-field="l.od_product_id"/></td>
+										 <td style="border-left:1px solid black;width:45%"><span t-field="l.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.qty"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/><td ></td>
+											
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.omn_maintenance_extra_expense_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table> 							
+				</div>
+				<br/>
+				<br/>
+				<div t-if="o.show_to_customer_omn_eqp">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Equipment Covered by The Scope of Service</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>	
+										<th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black;width:25%">صناعة</th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>رقم القطعة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>رقم سري</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>المدينة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>موقع</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>الملاحظات</right></th>
+									</tr>
+									<tr>
+										
+										 <th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										 <th class="text-center" style="border-left:1px solid black;width:25%">Manufacture</th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>Part NO</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Serial NO</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%"><right>City</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Location</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%"><right>Notes</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.omn_eqp_cov_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:25%"><span t-field="l.manufacture_id_id"/></td>
+										 <td style="border-left:1px solid black;width:15%"><span t-field="l.product_p_n.name"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.serial_no"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-field="l.city_id.name"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.location"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-field="l.notes"/></right></td>
+									</tr>
+									
+								</tbody>
+					</table> 							
+				</div>
+				<br/>
+			</div>
+			</div> -->
+										<!-- pAGE 12 0 & M-->
+			<div t-if="o.included_om_in_quotation">
+			<div class="page">
+				<div class="row">
+					<div class="col-xs-12">
+						 <img src="data:image/jpeg;base64,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" alt="800ERP" style="width:200px; height:100px"/>
+					</div>
+					<br/>
+	<br/>
+	<br/>
+	<br/><br/><br/>
+				
+					 <div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12">
+								<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+									<div class="col-xs-12">
+										<center><h4><span t-field="o.od_customer_id"/></h4></center>
+									</div>
+								</div>
+								<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+									<div class="col-xs-12">
+										<center><h4><span t-field="o.name"/></h4></center>
+									</div>
+								</div>
+								<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+									<div  class="col-xs-12">
+										<strong><center><h4>Operation &amp; Maintenace</h4></center></strong>
+									</div>		
+								</div>
+								<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+									<div  class="col-xs-12">
+										<div class="col-xs-4" >
+											<center><h4>Reference No:</h4></center>
+										</div>	
+										<div class="col-xs-4" >
+											<center><h4><span t-field="o.number"/></h4></center>
+										</div>
+										<div class="col-xs-4" >
+											<center><h4>:رقم العرض</h4></center>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</div>
+					<br/>
+					
+				</div>	 
+				
+				
+			<!-- Holidays -->
+				<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:15%">Month or Year	</th>
+										<th class="text-center" style="border-left:1px solid black;width:8%">Number</th>
+										<th class="text-center" style="border-left:1px solid black;width:15%">Level</th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Public Holidays</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Start Date</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>End Date</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:35%"><right>Comments</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr>
+										 <td style="border-left:1px solid black;width:5%"><center><span t-field="o.o_m_year_month"/></center></td>
+										 <td style="border-left:1px solid black;width:15%"><center><span t-field="o.o_m_number"/></center></td>
+										 <td style="border-left:1px solid black;width:15%"><center><span t-field="o.o_m_level"/></center></td>
+										 <t t-if="o.o_m_public_holiday">
+											<td style="border-left:1px solid black;width:10%"><center>YES</center></td>
+										 </t>
+										  <t t-if="not o.o_m_public_holiday">
+											<td style="border-left:1px solid black;width:10%"><center>NO</center></td>
+										 </t>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><center><t t-esc="o.o_m_start_date"/></center></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><center><span t-esc="o.o_m_end_date"/></center></td>
+										 <td class="text-right" style="border-left:1px solid black;width:35%"><t t-esc="o.o_m_comment"/></td>
+									</tr>
+								</tbody>
+				</table>  
+			
+			
+			
+			 <!--Exclusions from Beta IT Scope of work-->
+		
+				<div t-if="o.show_om_residenteng_cust">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Resident Engineers</h3></center>
+							</div>
+						</div>	
+					</div>	
+					<br/>
+					<table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										<th class="text-center" style="border-left:1px solid black; width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black; width:65%"><right>الوصف</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:65%"><right>Description</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.om_residenteng_line" t-as="l" >
+										<td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										<td style="border-left:1px solid black;width:65%"><span t-field="l.name"/></td>
+										<td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty"/></td>
+										<td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										<td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+										<td/><td/><td/>
+											
+										<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+										<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.om_residenteng_line] )))"/></strong></td>
+											  
+									</tr>
+								</tbody>
+					</table>  
+				</div>
+				<br/>
+					 <!-- bim inclusions-->
+				<div t-if="o.show_om_eqpmntreqst_cust">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Material / Tools / Equipment Required for O&amp;M</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الشركة المصنعة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>رقم القطعة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:35%"><right>الوصف</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>اكتب</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>وحدة القياس</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+									</tr>
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Manufacturer</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Product Part NO</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:35%"><right>Description</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Type</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>UoM</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.om_eqpmentreq_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:10%"><span t-field="l.manufacture_id"/></td>
+										 <td style="border-left:1px solid black;width:10%"><span t-field="l.part_no"/></td>
+										 <td style="border-left:1px solid black;width:35%"><span t-field="l.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><span t-field="l.types"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><span t-field="l.uom_id.name"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="l.qty"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+									</tr>
+									<tr>
+												<td/><td/><td/><td/><td/><td/><td/>
+												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.om_eqpmentreq_line] )))"/></strong>  </td>
+											  
+											</tr>
+								</tbody>
+					</table> 							
+				</div>
+				<br/>
+			  <div t-if="o.show_om_exclusion_cust">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Exclusions from O&amp;M Works</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border:1px solid black;">
+								<span t-field="o.om_ex_works_note"/>
+							</div>
+						</div>	
+					</div>
+					<br/>										
+				</div>
+				<br/>
+				 <div t-if="o.show_om_inclusion_cust">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Inclusions from O&amp;M Works</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border:1px solid black;">
+								<span t-field="o.om_in_works_note"/>
+							</div>
+						</div>		
+					</div>
+					<br/>										
+				</div>
+				<br/>
+				
+				<br/>
+				<div t-if="o.show_to_customer_o_m_eqp">
+		
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="col-xs-12" style="border: 1px solid silver;background-color:silver">
+								<center><h3>Equipment Covered by The Scope of Service</h3></center>
+							</div>  
+						</div>
+					</div>	
+					<br/>
+					  <table class="table table-condensed" style="border: 1px solid black; width:100%">  
+								<thead style="background-color:silver">								
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">العنصر</th>
+										<th class="text-center" style="border-left:1px solid black;width:25%">صناعة</th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>رقم القطعة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>رقم متسلسل</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>المدينة</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>موقع</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>الملاحظات</right></th>
+									</tr>
+									<tr>
+										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
+										<th class="text-center" style="border-left:1px solid black;width:25%">Manufacture</th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>Part NO</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Serial NO</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>City</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Location</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><right>Notes</right></th>
+									</tr>
+								</thead>							
+								<tbody style="border-bottom: 1px solid black;">
+									<tr t-foreach="o.o_m_eqp_cov_line" t-as="l" >
+										 <td style="border-left:1px solid black;width:5%"><span t-field="l.item"/></td>
+										 <td style="border-left:1px solid black;width:25%"><span t-field="l.manufacture_id_id"/></td>
+										 <td style="border-left:1px solid black;width:15%"><span t-field="l.product_p_n.name"/></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.serial_no"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-field="l.city_id.name"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.location"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-field="l.notes"/></right></td>
+									</tr>
+								</tbody>
+					</table> 							
+				</div>
+				<br/>
+			</div>
+			</div>
+			<!-- <div class="footer">
+			<div class="text-center" style="border-top: 1px solid black;">
+				<center>www.betait.net</center><br/>
+				<b>Dubai</b> +97147061111 - <b>Abu Dhabi</b> +97126662836 - <b>Riyadh</b> +966112006066 - <b>Dammam</b> +966138092515 - <b>Jeddah</b> +966122616880
+
+				<ul class="list-inline">
+					<li>Page:</li>
+					<li><span class="page"/></li>
+					<li>/</li>
+					<li><span class="topage"/></li>
+				</ul>
+			</div>
+			</div> -->
+		</t>
+	</t>
