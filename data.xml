@@ -205,6 +205,7 @@
 						<tr>
 										<th class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:5%" ><h5>Item الرقم</h5></th>
 										<th class="text-center" style="border-left:1px solid black; border-bottom:1px solid black;width:20%"><center><h5> Description  الوصف</h5></center></th>
+
 										<!-- <th class="text-center" style="border-left:1px solid black; border-bottom:1px solid black;width:20%"><center><h4> الوصف</h4></center></th> -->
 										<th class="text-center" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><center><h5>Total Price السعر الإجمالي</h5></center></th>
 										
@@ -333,6 +334,14 @@
 						<tr>
 										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >Special Discount</td>
 										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(o.special_discount))"/></right></td>
+						</tr>
+						<tr>
+										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >VAT</td>
+										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(o.sum_vat))"/></right></td>
+						</tr>
+						<tr>
+										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >Total with VAT</td>
+										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(o.sum_total_with_vat))"/></right></td>
 						</tr>
 						<tr>
 										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >Total Excluding VAT ----- المجموع غير شامل لضريبة القيمة المضافة (Note: Government has introduced VAT starting Jan 2018 ----- قامت  الحكومة بفرض 
@@ -731,9 +740,12 @@
 										 <th class="text-center" style="border-left:1px solid black; width:4%"><center>النوع</center></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>وحدة القياس</center></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+
 										 <!-- <th class="text-center" style="border-left:1px solid black; width:10%"><right>عملة</right></th> -->
-										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>سعر الوحدة</right></th>
-										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>السعر الإجمالي للسطر</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:14%"><right></right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><center></center></th>
 									</tr>							
 									<tr>
 										
@@ -744,9 +756,12 @@
 										 <th class="text-center" style="border-left:1px solid black; width:4%"><center>Type</center></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>UoM</center></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
+										
 										 <!-- <th class="text-center" style="border-left:1px solid black; width:10%"><right>Curency</right></th> -->
 										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>Unit Price</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>Line Price</center></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -768,6 +783,8 @@
 										  <!-- <td class="text-right" style="border-left:1px solid black;"><right><span t-esc="l.sales_currency_id.name"/></right></td>	 -->
 										    <td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										    <td class="text-right" style="border-right:1px solid black;border-left:1px solid black"><right><span t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										    <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat"/></right></td>
+										    <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat_value"/></right></td>
 										   </t>
 									
 									    </tr>
@@ -809,6 +826,8 @@
 										 <!-- <th class="text-center" style="border-left:1px solid black; width:10%"><right>عملة</right></th> -->
 										 <th class="text-center" style="border-left:1px solid black; width:14%"><right>سعر الوحدة</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><center>السعر الإجمالي للسطر</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>
 									<tr>
 										
@@ -822,6 +841,8 @@
 										<!-- <th class="text-center" style="border-left:1px solid black; width:10%"><right>Curency</right></th> -->
 										<th class="text-center" style="border-left:1px solid black; width:14%"><right>Unit Price</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><center>Line Price</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -836,6 +857,8 @@
 												<!-- <td class="text-right" style="border-left:1px solid black;"><right><span t-esc="l.sales_currency_id.name"/></right></td>	 -->
 												<td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 												  <td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+												  <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat"/></right></td>
+										    	<td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat_value"/></right></td>
 											</tr>
 											<!--	<tr>
 												<td/><td/><td/><td/><td/><td/><td style="width:30%"></td>
@@ -869,6 +892,8 @@
 										<th class="text-center" style="border-left:1px solid black;"><right>الكمية</right></th>
 										<th class="text-center" style="border-left:1px solid black;"><right>سعر الوحدة</right></th>
 										<th class="text-center" style="border-left:1px solid black;"><center>السعر الإجمالي للسطر</center></th>
+										<th class="text-center" style="border-left:1px solid black;"><right></right></th>
+										<th class="text-center" style="border-left:1px solid black;"><center></center></th>
 									</tr>
 									<tr>
 										
@@ -878,6 +903,8 @@
 										<th class="text-center" style="border-left:1px solid black;"><right>Qty</right></th>
 										<th class="text-center" style="border-left:1px solid black;"><right>Unit Price</right></th>
 										<th class="text-center" style="border-left:1px solid black;"><center>Line Price</center></th>
+										<th class="text-center" style="border-left:1px solid black;"><right>VAT</right></th>
+										<th class="text-center" style="border-left:1px solid black;"><center>VAT Amount</center></th>
 										
 										
 									</tr>
@@ -893,7 +920,8 @@
 												<td class="text-right" style="border-left:1px solid black;"><right><span t-esc="l.qty"/></right></td>
 												<td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price2))"/></right></td>
 												<td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.line_price2))"/></right></td>
-												
+												 <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat"/></right></td>
+										    <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat_value"/></right></td>
 											</tr>
 									
 										<!--	<tr>
@@ -1248,6 +1276,8 @@
 										 <th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>
 									<tr>
 										
@@ -1260,6 +1290,8 @@
 										 <th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>	
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -1273,13 +1305,17 @@
 										 <td class="text-center" style="border-left:1px solid black;width:5%"><span t-esc="l.qty"/></td>	
 										  <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>	
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat_value"/></right></td>
+
 									</tr>
 									<tr>
-												<td/><td/><td/><td ></td>
-												<td/><td/><td ></td>
+												<td/><td/><td/>
+												<td/><td/><td/><td/>
 												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.trn_customer_training_line] )))"/></strong>  </td>
-											  
+											  <td/>
+											  <td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.trn_customer_training_line] )))"/></strong>  </td>
 											</tr>
 								</tbody>
 									
@@ -1329,6 +1365,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>تكلفة الوحدة</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>خط التكلفة</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>							
 									<tr>
 										
@@ -1338,6 +1376,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Cost</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Cost</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -1348,13 +1388,16 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.qty "/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.unit_cost_local))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_cost_local))"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat_value"/></right></td>
 									</tr>
 									<tr>
-												<td/><td/><td/><td ></td>
+												<td/><td/><td/><td/>
 											
 												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_cost_local for oal in o.trn_customer_training_extra_expense_line] )))"/></strong>  </td>
-											  
+											  <td/>
+											  <td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.trn_customer_training_extra_expense_line] )))"/></strong>  </td>
 											</tr>
 								</tbody>
 					</table>
@@ -1492,6 +1535,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>							
 									<tr>
 										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
@@ -1499,6 +1544,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:10%"><center>Qty</center></th>
 										<th class="text-center" style="border-left:1px solid black; width:15%"><center>Unit Price</center></th>
 										<th class="text-center" style="border-left:1px solid black; width:15%"><center>Line Price</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><center>VAT</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><center>VAT Amount</center></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -1508,13 +1555,17 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.qty "/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.vat "/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.vat_value "/></right></td>
 									</tr>
 									<tr>
 												<td/><td/><td ></td>
 											
 												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.implimentation_extra_expense_line] )))"/></strong>  </td>
-					  
+												<td></td>
+												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.implimentation_extra_expense_line] )))"/></strong>  </td>
+					  						
 									</tr>
 								</tbody>
 					</table>
@@ -1544,6 +1595,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>							
 									<tr>
 										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
@@ -1551,6 +1604,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:10%"><center>Qty</center></th>
 										<th class="text-center" style="border-left:1px solid black; width:15%"><center>Unit Price</center></th>
 										<th class="text-center" style="border-left:1px solid black; width:15%"><center>Line Price</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><center>VAT</center></th>
+										<th class="text-center" style="border-left:1px solid black; width:15%"><center>VAT Amount</center></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -1560,13 +1615,16 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.qty "/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.vat "/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.vat_value "/></right></td>
 									</tr>
 									<tr>
 												<td/><td/><td ></td>
 											
 												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.manpower_manual_line] )))"/></strong>  </td>
-											  
+											  <td></td>
+											  <td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.manpower_manual_line] )))"/></strong>  </td>
 											</tr>
 								</tbody>
 					</table>
@@ -1596,6 +1654,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>							
 									<tr>
 										
@@ -1604,6 +1664,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><center>Qty</center></th>
 										 <th class="text-center" style="border-left:1px solid black; width:15%"><center>Unit Price</center></th>
 										 <th class="text-center" style="border-left:1px solid black; width:15%"><center>Line Price</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%"><center>VAT</center></th>
+										 <th class="text-center" style="border-left:1px solid black; width:15%"><center>VAT Amount</center></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -1613,6 +1675,8 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.qty "/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.vat "/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.vat_value "/></right></td>
 									</tr>
 									<tr>
 												<td/><td/><td ></td>
@@ -1649,6 +1713,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>
 									<tr>
 										
@@ -1658,6 +1724,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -1668,6 +1736,8 @@
 										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty "/></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										  <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat "/></td>
+										   <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat_value "/></td>
 									</tr>
 									<tr>
 												<td/><td/><td/><td ></td>
@@ -1702,6 +1772,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>
 									<tr>
 										
@@ -1710,6 +1782,9 @@
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
+
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -1719,6 +1794,8 @@
 										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty "/></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat "/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat_value "/></td>
 									</tr>
 									<tr>
 												<td/><td/><td ></td>
@@ -1876,6 +1953,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>
 									<tr>
 										
@@ -1884,6 +1963,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -1893,13 +1974,16 @@
 										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty"/></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat_value"/></td>
 									</tr>
 									<tr>
 												<td/><td/><td/>
 											
 												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.bmn_it_preventive_line] )))"/></strong>  </td>
-											  
+											  <td/>
+											  <td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.bmn_it_preventive_line] )))"/></strong>  </td>
 											</tr>
 								</tbody>
 					</table>  
@@ -1925,6 +2009,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>
 									<tr>
 										
@@ -1933,6 +2019,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -1942,12 +2030,15 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.qty"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.vat"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.vat_value"/></right></td>
 									</tr>
 									<tr>
 												<td/><td/><td/>
 												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.bmn_it_remedial_line] )))"/></strong>  </td>
-											  
+											  <td/>
+											  <td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.bmn_it_remedial_line] )))"/></strong>  </td>
 											</tr>
 								</tbody>
 					</table> 							
@@ -1977,6 +2068,8 @@
 										 <th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>
 									<tr>
 										
@@ -1989,6 +2082,8 @@
 										 <th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -2002,13 +2097,16 @@
 										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.qty"/></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.vat"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.vat_value"/></td>
 									</tr>
 									<tr>
-												<td/><td/><td/><td ></td>
 												<td/><td/><td/>
+												<td/><td/><td/><td/>
 												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.bmn_spareparts_beta_it_maintenance_line] )))"/></strong>  </td>
-											  
+											  <td/>
+											  <td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.bmn_spareparts_beta_it_maintenance_line] )))"/></strong>  </td>
 											</tr>
 								</tbody>
 					</table> 							
@@ -2034,6 +2132,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>
 									<tr>
 										
@@ -2043,6 +2143,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -2053,13 +2155,16 @@
 										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.qty"/></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										  <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.vat"/></td>
+										   <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.vat_value"/></td>
 									</tr>
 									<tr>
-												<td/><td/><td/><td ></td>
+												<td/><td/><td/><td/>
 											
 												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.bmn_beta_it_maintenance_extra_expense_line] )))"/></strong>  </td>
-											  
+											  <td/>
+											  <td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.bmn_beta_it_maintenance_extra_expense_line] )))"/></strong>  </td>
 											</tr>
 								</tbody>
 					</table> 							
@@ -2132,6 +2237,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>
 									<tr>
 										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
@@ -2139,6 +2246,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -2148,13 +2257,16 @@
 										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty"/></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat_value"/></td>
 									</tr>
 									<tr>
 												<td/><td/><td/>
 											
 												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.omn_out_preventive_maintenance_line] )))"/></strong>  </td>
-											  
+											  <td/>
+											  <td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.omn_out_preventive_maintenance_line] )))"/></strong>  </td>
 											</tr>
 								</tbody>
 					</table>  
@@ -2179,6 +2291,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>
 									<tr>
 										
@@ -2187,6 +2301,8 @@
 										  <th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
 										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										 <th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -2196,12 +2312,15 @@
 										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty"/></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat_value"/></td>
 									</tr>
 									<tr>
 												<td/><td/><td/>
 												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.omn_out_remedial_maintenance_line])) )"/></strong>  </td>
-											  
+											  <td/>
+											  <td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.omn_out_remedial_maintenance_line])) )"/></strong>  </td>
 											</tr>
 								</tbody>
 					</table> 							
@@ -2229,6 +2348,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right> </right></th>
 									</tr>
 									<tr>
 										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
@@ -2240,6 +2361,9 @@
 										<th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
+
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -2253,13 +2377,16 @@
 										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="l.qty"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="l.vat"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="l.vat_value"/></right></td>
 									</tr>
 									<tr>
-												<td/><td/><td/><td ></td>
+												<td/><td/><td/><td/>
 												<td/><td/><td/>
 												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.omn_spare_parts_line] )))"/></strong>  </td>
-											  
+											  <td/>
+											  <td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.omn_spare_parts_line] )))"/></strong>  </td>
 											</tr>
 								</tbody>
 					</table> 							
@@ -2284,6 +2411,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>
 									<tr>	
 										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
@@ -2292,6 +2421,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -2302,13 +2433,16 @@
 										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.qty"/></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.vat"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.vat_value"/></td>
 									</tr>
 									<tr>
-												<td/><td/><td/><td ></td>
+												<td/><td/><td/><td/>
 											
 												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.omn_maintenance_extra_expense_line] )))"/></strong>  </td>
-											  
+											  <td/>
+											  <td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.omn_maintenance_extra_expense_line] )))"/></strong>  </td>
 											</tr>
 								</tbody>
 					</table> 							
@@ -2830,6 +2964,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>الكمية</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>
 									<tr>
 										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
@@ -2837,6 +2973,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Qty</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -2846,13 +2984,16 @@
 										<td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.qty"/></td>
 										<td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										<td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										<td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat"/></td>
+										<td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat_value"/></td>
 									</tr>
 									<tr>
 										<td/><td/><td/>
 											
 										<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 										<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.om_residenteng_line] )))"/></strong></td>
-											  
+										<td/>	 
+										<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.om_residenteng_line] )))"/></strong></td> 
 									</tr>
 								</tbody>
 					</table>  
@@ -2881,6 +3022,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:5%"><right>الكمية</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>سعر الوحدة</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>السعر الإجمالي للسطر</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right></right></th>
 									</tr>
 									<tr>
 										<th class="text-center" style="border-left:1px solid black;width:5%">Item</th>
@@ -2892,6 +3035,8 @@
 										<th class="text-center" style="border-left:1px solid black; width:5%"><right>Qty</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Unit Price</right></th>
 										<th class="text-center" style="border-left:1px solid black; width:10%"><right>Line Price</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT</right></th>
+										<th class="text-center" style="border-left:1px solid black; width:10%"><right>VAT Amount</right></th>
 									</tr>
 								</thead>							
 								<tbody style="border-bottom: 1px solid black;">
@@ -2905,12 +3050,15 @@
 										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="l.qty"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="l.vat"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="l.vat_value"/></right></td>
 									</tr>
 									<tr>
 												<td/><td/><td/><td/><td/><td/><td/>
 												<td class="text-right" style="border-right:1px solid black;"><strong>Total</strong></td>	
 												<td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.line_price for oal in o.om_eqpmentreq_line] )))"/></strong>  </td>
-											  
+											  <td/>
+											  <td class="text-right" ><strong><span t-esc="'{0:,.2f}'.format(float(sum([oal.vat_value for oal in o.om_eqpmentreq_line] )))"/></strong>  </td>
 											</tr>
 								</tbody>
 					</table> 							
