@@ -328,7 +328,7 @@
 		<table class="table table-condensed" style="border:1px solid black;">
 		<thead style="background-color:silver">
 		                <tr>
-										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >Sum</td>
+										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >Before VAT</td>
 										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(o.sum_tot_sale))"/></right></td>
 						</tr>
 						<tr>
@@ -343,11 +343,7 @@
 										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >Total with VAT</td>
 										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(o.sum_total_with_vat))"/></right></td>
 						</tr>
-						<tr>
-										<td class="text-center" style="border-left:1px solid black;border-bottom:1px solid black;width:35%" >Total Excluding VAT ----- المجموع غير شامل لضريبة القيمة المضافة (Note: Government has introduced VAT starting Jan 2018 ----- قامت  الحكومة بفرض 
- ضريبة القيمة المضافة على المبيعات في العام القادم ابتداء من شهر يناير 2018)</td>
-										<td class="text-right" style="border-left:1px solid black; border-bottom:1px solid black;width:15%"><right><t t-esc="'{0:,.2f}'.format(float(o.sum_total_sale))"/></right></td>
-						</tr>
+						
 		</thead>
 		</table>
 		</div>
@@ -784,7 +780,7 @@
 										    <td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										    <td class="text-right" style="border-right:1px solid black;border-left:1px solid black"><right><span t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
 										    <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat"/></right></td>
-										    <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat_value"/></right></td>
+										    <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></right></td>
 										   </t>
 									
 									    </tr>
@@ -858,7 +854,7 @@
 												<td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 												  <td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
 												  <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat"/></right></td>
-										    	<td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat_value"/></right></td>
+										    	<td class="text-center" style="border-left:1px solid black;"><right><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></right></td>
 											</tr>
 											<!--	<tr>
 												<td/><td/><td/><td/><td/><td/><td style="width:30%"></td>
@@ -921,7 +917,7 @@
 												<td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price2))"/></right></td>
 												<td class="text-right" style="border-left:1px solid black;"><right><span t-esc="'{0:,.2f}'.format(float(l.line_price2))"/></right></td>
 												 <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat"/></right></td>
-										    <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat_value"/></right></td>
+										    <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></right></td>
 											</tr>
 									
 										<!--	<tr>
@@ -1306,7 +1302,7 @@
 										  <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>	
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
 										 <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat"/></right></td>
-										 <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat_value"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></right></td>
 
 									</tr>
 									<tr>
@@ -1389,7 +1385,7 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.unit_cost_local))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_cost_local))"/></right></td>
 										 <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat"/></right></td>
-										 <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="l.vat_value"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;"><right><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></right></td>
 									</tr>
 									<tr>
 												<td/><td/><td/><td/>
@@ -1975,7 +1971,7 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
 										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat"/></td>
-										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat_value"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></td>
 									</tr>
 									<tr>
 												<td/><td/><td/>
@@ -2031,7 +2027,7 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.vat"/></right></td>
-										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="l.vat_value"/></right></td>
+										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></right></td>
 									</tr>
 									<tr>
 												<td/><td/><td/>
@@ -2098,7 +2094,7 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
 										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.vat"/></td>
-										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.vat_value"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></td>
 									</tr>
 									<tr>
 												<td/><td/><td/>
@@ -2156,7 +2152,7 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
 										  <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.vat"/></td>
-										   <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.vat_value"/></td>
+										   <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></td>
 									</tr>
 									<tr>
 												<td/><td/><td/><td/>
@@ -2258,7 +2254,7 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
 										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat"/></td>
-										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat_value"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></td>
 									</tr>
 									<tr>
 												<td/><td/><td/>
@@ -2313,7 +2309,7 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
 										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat"/></td>
-										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat_value"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></td>
 									</tr>
 									<tr>
 												<td/><td/><td/>
@@ -2378,7 +2374,7 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
 										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="l.vat"/></right></td>
-										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="l.vat_value"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></right></td>
 									</tr>
 									<tr>
 												<td/><td/><td/><td/>
@@ -2434,7 +2430,7 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
 										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.vat"/></td>
-										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="l.vat_value"/></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></td>
 									</tr>
 									<tr>
 												<td/><td/><td/><td/>
@@ -2985,7 +2981,7 @@
 										<td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										<td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
 										<td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat"/></td>
-										<td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="l.vat_value"/></td>
+										<td class="text-center" style="border-left:1px solid black;width:10%"><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></td>
 									</tr>
 									<tr>
 										<td/><td/><td/>
@@ -3051,7 +3047,7 @@
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><span t-esc="'{0:,.2f}'.format(float(l.unit_price))"/></right></td>
 										 <td class="text-right" style="border-left:1px solid black;width:10%"><right><t t-esc="'{0:,.2f}'.format(float(l.line_price))"/></right></td>
 										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="l.vat"/></right></td>
-										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="l.vat_value"/></right></td>
+										 <td class="text-center" style="border-left:1px solid black;width:5%"><right><t t-esc="'{0:,.2f}'.format(float(l.vat_value))"/></right></td>
 									</tr>
 									<tr>
 												<td/><td/><td/><td/><td/><td/><td/>
